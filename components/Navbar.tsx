@@ -18,10 +18,10 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        { name: 'The Fleet', href: '#fleet' },
-        { name: 'Reviews', href: '#testimonials' },
-        { name: 'Experience', href: '#experience' },
-        { name: 'FAQ', href: '#faq' },
+        { name: 'The Fleet', href: '/#fleet' },
+        { name: 'Reviews', href: '/#testimonials' },
+        { name: 'Experience', href: '/#experience' },
+        { name: 'FAQ', href: '/#faq' },
     ];
 
     return (
@@ -35,14 +35,16 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center gap-3 group cursor-pointer">
-                    <div className="w-10 h-10 bg-adventure-accent flex items-center justify-center font-bold text-adventure-bg text-2xl shadow-lg group-hover:bg-adventure-mist transition-colors">
-                        S
+                <Link href="/">
+                    <div className="flex items-center gap-3 group cursor-pointer">
+                        <div className="w-10 h-10 bg-adventure-accent flex items-center justify-center font-bold text-adventure-bg text-2xl shadow-lg group-hover:bg-adventure-mist transition-colors">
+                            S
+                        </div>
+                        <span className="text-2xl font-playfair font-black text-adventure-mist tracking-tighter uppercase drop-shadow-md">
+                            Siliguri <span className="text-adventure-accent">Bike Rental</span>
+                        </span>
                     </div>
-                    <span className="text-2xl font-playfair font-black text-adventure-mist tracking-tighter uppercase drop-shadow-md">
-                        Siliguri <span className="text-adventure-accent">Bike Rental</span>
-                    </span>
-                </div>
+                </Link>
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-10">
@@ -111,9 +113,11 @@ export default function Navbar() {
                         ))}
 
                         <div className="mt-8 flex flex-col items-center gap-4">
-                            <button className="px-12 py-4 border-2 border-adventure-accent text-adventure-accent text-lg font-black uppercase tracking-widest">
-                                Book Now
-                            </button>
+                            <Link href="/booking">
+                                <button className="px-12 py-4 border-2 border-adventure-accent text-adventure-accent text-lg font-black uppercase tracking-widest">
+                                    Book Now
+                                </button>
+                            </Link>
                             <span className="text-adventure-accent font-bold tracking-widest">+91-8116915168</span>
                         </div>
                     </motion.div>
