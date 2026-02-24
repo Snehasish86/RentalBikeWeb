@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -18,9 +19,9 @@ export default function Navbar() {
 
     const navLinks = [
         { name: 'The Fleet', href: '#fleet' },
-        { name: 'Tours', href: '#tours' },
+        { name: 'Reviews', href: '#testimonials' },
         { name: 'Experience', href: '#experience' },
-        { name: 'About', href: '#about' },
+        { name: 'FAQ', href: '#faq' },
     ];
 
     return (
@@ -55,14 +56,19 @@ export default function Navbar() {
                         </a>
                     ))}
                     <div className="flex flex-col items-end gap-1">
-                        <motion.button
-                            whileHover={{ scale: 1.05, backgroundColor: '#7DA065', color: '#1B261A' }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-8 py-2.5 border-2 border-adventure-accent text-adventure-accent text-xs font-black uppercase tracking-widest transition-all shadow-lg"
-                        >
-                            Book Now
-                        </motion.button>
-                        <span className="text-[10px] text-adventure-accent font-bold tracking-[0.2em]">+91-8116915168</span>
+                        <Link href="/booking">
+                            <motion.button
+                                whileHover={{ scale: 1.05, backgroundColor: '#7DA065', color: '#1B261A' }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-2.5 border-2 border-adventure-accent text-adventure-accent text-xs font-black uppercase tracking-widest transition-all shadow-lg"
+                            >
+                                Book Now
+                            </motion.button>
+                        </Link>
+                        <div className="flex items-center gap-2">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2354/2354127.png" alt="Phone" className="w-3 h-3 invert opacity-70" />
+                            <span className="text-[10px] text-adventure-accent font-bold tracking-[0.2em]">+91-8116915168</span>
+                        </div>
                     </div>
                 </div>
 

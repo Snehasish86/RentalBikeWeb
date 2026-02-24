@@ -18,9 +18,11 @@ export default function FeatureSection() {
                             className="text-center group"
                         >
                             <div className="w-20 h-20 bg-adventure-primary/20 flex items-center justify-center mx-auto mb-8 border border-adventure-accent/30 rotate-45 group-hover:rotate-0 transition-all duration-500">
-                                <span className="text-3xl text-adventure-accent rotate-[-45deg] group-hover:rotate-0 transition-all duration-500">
-                                    {feature.icon}
-                                </span>
+                                <img
+                                    src={feature.icon}
+                                    alt=""
+                                    className="w-10 h-10 object-contain rotate-[-45deg] group-hover:rotate-0 transition-all duration-500 invert opacity-80 group-hover:opacity-100"
+                                />
                             </div>
                             <h3 className="text-xl md:text-2xl font-black text-adventure-mist mb-4 uppercase drop-shadow-md">
                                 {feature.title}

@@ -6,6 +6,9 @@ import ProductShowcase from '@/components/ProductShowcase';
 import FeatureSection from '@/components/FeatureSection';
 import FinalCTA from '@/components/FinalCTA';
 import Navbar from '@/components/Navbar';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
+import Footer from '@/components/Footer';
 
 export default function Home() {
     useEffect(() => {
@@ -25,13 +28,21 @@ export default function Home() {
                 <ProductShowcase />
             </section>
 
+            {/* Testimonials */}
+            <Testimonials />
+
             {/* Feature Highlights Section */}
             <section id="experience">
                 <FeatureSection />
             </section>
 
+            {/* FAQ Section */}
+            <FAQ />
+
             {/* Final Call-to-Action */}
             <FinalCTA />
+
+            <Footer />
         </main>
     );
 }
